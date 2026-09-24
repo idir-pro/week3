@@ -1,0 +1,126 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+	 v2.0 | 20110126
+	 License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote::before, blockquote::after,
+q::before, q::after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ia for each of the header, nav , main, and footer: add a 2px black border, a light gray background, 10px of padding on all sides, and using flexbox, center the content horizontaly and vertically */
+
+header,
+nav,
+main,
+footer {
+	border: 2px solid black;
+	background-color: lightgray;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+         /*************************
+         
+              skip links         
+          *************************/
+/**** first things is to hide the naavigation**/
+ nav.skiplinks a{
+     position: absolute;
+     top: -1000px; /***a negative number means above the top of the page **/
+
+        left: 0px;
+ }
+
+ /*****make each skip link show up when the user tabs to it, using  :focus 
+ psuedo-class**/
+
+ nav.skiplinks a:focus {
+     top: 0px;
+ }
+
+                         /*****
+                   mobile styles
+                    ******/
+
+   .container {
+              display: grid;
+           
+                    }
+
+          /*************************
+                    Media querry 
+                *************************/
+
+@media screen and (min-width: 760px) {
+     /***** at the larger size, use a grid map to create a specific layout  *****/
+
+     .container {
+         grid-template-areas:
+     "h h h"
+     "n m m"
+     "f f f";
+         
+     }
+header {
+    grid-area: h;
+}
+nav {
+    grid-area: n;
+}
+main {
+    grid-area: m;
+}
+footer {
+    grid-area: f;
+}
+}
+
+
+

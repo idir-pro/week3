@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Accessibility and other stuff week 3</title>
+</head>
+<body>
+    <!-- IA did that for me  -->
+    <div class="container">
+        <nav class="skiplinks">
+
+            <!----skip links are disigned to be the first things the user tabe to, if they are using a keyboard to
+            navoigate your site----->
+            <ul>
+                <!----the links text should start with the skip to ---->
+                
+                <li><a href="mainnav">skip to main navigation</a></li>
+                <li><a href="maincont">skip to main content</a></li>   
+                <li><a href="#">skip to sidebar</a></li>
+                 <li><a href="#">skip to the footer</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1> week 3 Accessibility</h1>
+        </header>
+        <nav id="mainnav">
+    nav
+        </nav>
+
+        <main id="maincont">
+            
+   <section>
+    <img
+    aria-label="Peperoni-head"
+    aria-describedby="Peperoni-desc"
+    src="animals/peperoni.WEBP"
+     alt="Peperoni"> 
+     <h3 id="Peperoni-desc">Peperoni is a dog that is very cute and loves to play with his owner</h3>
+     <p id="Peperoni-desc">stuff about the peperoni </p>
+   </section>
+
+
+
+
+
+<section> itemscope itemtype="https://schema.org/Event">
+    <h3> career fair</h3>
+     <article>
+        <h4>awesome career fair</h4>
+        <p><span>bob somebody</span> is launching</p>
+        <p>itemprop="startDate" >friday, october 30, 2026</p>
+     </article>
+
+</section>
+
+
+
+        </main>
+
+        <footer>
+      footer
+        </footer>
+    </div>
+</body>
+</html>
